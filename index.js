@@ -19,7 +19,7 @@ server.listen(process.env.PORT || 3000);
 // ルーター設定
 server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
     // 先行してLINE側にステータスコード200でレスポンスする。
-    res.sendStatus(200);
+    // res.sendStatus(200);
 
     // すべてのイベント処理のプロミスを格納する配列。
     let events_processed = [];
